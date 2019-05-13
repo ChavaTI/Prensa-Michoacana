@@ -42,7 +42,7 @@ Status boolean NOT NULL
 CREATE TABLE RamaDelConocimiento(
 IdRamaDelConocimiento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 Ciencia VARCHAR(30) NOT NULL,
-Tecnología VARCHAR(30),
+Tecnologia VARCHAR(30),
 IdArticulo INT NOT NULL,
 Status boolean NOT NULL
 );
