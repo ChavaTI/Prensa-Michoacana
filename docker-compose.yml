@@ -11,7 +11,19 @@ services:
     ports:
       - "9090:80"
     restart: always
-  
+  db:
+    image: mysql:5.7
+    container_name: PruebaDB
+    restart: always
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwerty12345
+      - MYSQL_USER=administrator
+      - MYSQL_PASSWORD=adminpass123
+      - MYSQL_DATABASE=Prueba
+    ports:
+      - "3308:3306"
 networks:
  default:
   external:
