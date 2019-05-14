@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-    <main>
+    <main class="container">
         <header>
             <h1>Login</h1>          
         </header>
