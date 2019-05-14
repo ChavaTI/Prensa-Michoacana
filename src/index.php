@@ -9,7 +9,7 @@
 <body>
     <main>
         <header>
-            <h1>Login chido</h1>          
+            <h1>Login</h1>          
         </header>
         <article>
             <form action="post">
@@ -21,15 +21,8 @@
                 <input type="reset" value="Cancelar">
             </form>
         </article>
-        <aside> 
-        </aside>
-        <article>
-            <p><menu type="context"></menu>
-            <p>contactos</p>
-        </article>
-
         <footer>
-            
+            <p><small>Pagína web creada por Jennifer Melgoza Tellez y Salvador Hernández López</small></p>
         </footer>
     </main>
 </body>
