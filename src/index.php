@@ -7,15 +7,23 @@
     <title>Index</title>
 </head>
 <body>
-    <article>
-        <form action="post">
-            <label for="email">Correo electronico</label>
-            <input type="emai">
-            <label for="pass">Contraseña</label>
-            <input type="password">
-            <input type="submit" value="Entrar">
-            <input type="reset" value="Cancelar">
-        </form>
-    </article>
+    <main>
+        <header>
+            <h1>Login</h1>          
+        </header>
+        <article>
+            <form action="post">
+                <label for="email">Correo electronico</label>
+                <input type="emai">
+                <label for="pass">Contraseña</label>
+                <input type="password">
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Cancelar">
+            </form>
+        </article>
+        <footer>
+            
+        </footer>
+    </main>
 </body>
 </html>
