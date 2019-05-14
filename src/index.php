@@ -24,6 +24,7 @@
         <aside> 
         </aside>
         <article>
+        <p><menu type="context"></menu>
         </article>
 
         <footer>
