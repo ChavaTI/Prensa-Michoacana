@@ -9,20 +9,28 @@
 </head>
 <body>
     <main class="container">
-        <header>
-            <h1>Login</h1>          
+        <header class="row mt-5 mb-5">
+            <h1 class="col-1 offset-4 align-self-center">Login</h1>          
         </header>
-        <article>
-            <form action="post">
-                <label for="email">Correo electronico</label>
-                <input type="emai">
-                <label for="pass">Contraseña</label>
-                <input type="password">
-                <input type="submit" value="Entrar">
-                <input type="reset" value="Cancelar">
-            </form>
+        <article class="row mb-5">
+            <div class="col-3 offset-4">
+                <form action="post">
+                    <div class="form-group">
+                        <label for="email">Correo electronico</label>
+                        <input type="emai" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Entrar" class="btn btn-primary">
+                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                    </div>
+                </form>
+            </div>
         </article>
-        <footer>
+        <footer class="row mt-5">
             <p><small>Pagína web creada por Jennifer Melgoza Tellez y Salvador Hernández López</small></p>
         </footer>
     </main>
