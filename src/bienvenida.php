@@ -23,10 +23,7 @@ if($conn->connect_errno){
 
 
 //------------seleccionar el registro con el email que este por post----------------
-$sql = 'SELECT * FROM `Usuario` WHERE Status=true;
-
-
-para mostrar solo el que tiene el ID =1 ';
+$sql = 'SELECT * FROM `Usuario` WHERE Status=true AND IdLogin=1;  ';
 
 //-----------------------------------------------------------------------------------
 
