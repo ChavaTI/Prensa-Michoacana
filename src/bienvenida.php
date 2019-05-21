@@ -1,6 +1,6 @@
 <?php
 
-//------------------------Resivir las variables por metodo POST----------------------
+//------------------------Recibir las variables por metodo POST----------------------
 $email = $_POST['nombre'];
 $pass = $_POST['pass'];
 //------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ $pass = $_POST['pass'];
 $passEncryp = hash('sha256', 'pass'.$pass );
 //--------------------------------------------------------------------------
 
-//---------------Coneccion a la base de  datos-------------------------------
+//---------------Conexion a la base de  datos-------------------------------
 $conn = new mysqli('db','administrator','adminpass123','PrensaMichoacana');
 //---------------------------------------------------------------------------
 
@@ -23,7 +23,10 @@ if($conn->connect_errno){
 
 
 //------------seleccionar el registro con el email que este por post----------------
-$sql = '';
+$sql = 'SELECT * FROM `Usuario` WHERE Status=true;
+
+
+para mostrar solo el que tiene el ID =1 ';
 
 //-----------------------------------------------------------------------------------
 
