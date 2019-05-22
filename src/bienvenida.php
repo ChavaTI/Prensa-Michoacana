@@ -3,26 +3,34 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <title>Bienvenido</title>
 </head>
 <body>
-    <main>
-        <header>
-            <h1></h1>
-            <?php echo 'El usuario es '.$_SESSION['NombreUsuario']?>
+    <main class="container">
+        <header class="row">
+            <h1><?php echo 'Bienvenido '.$_SESSION['NombreUsuario']?></h1>
         </header>
-        <nav>
-
+        <nav class="row">
+            <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a  class="nav-link mr-5" href="bienvenida.php">Inicio</a></li>
+                    <li class="nav-item"><a  class="nav-link mr-5" href="about.html">Acerca de</a></li>
+                    <li class="nav-item"><a  class="nav-link mr-5" href="busqueda.php">Busqueda</a></li>
+                    <div style="width: 14.9cm"></div>
+                    <form action="cerrarSesion.php" method="get"><button class="btn btn-info ml-5" type="submit">Cerrar Sesion</button></form>
+                </ul>
+            </div>
         </nav>
-        <section>
+        <section class="row">
 
         </section>
-        <footer>
+        <footer class="row">
 
         </footer>
     </main>
