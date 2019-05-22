@@ -29,9 +29,11 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
     $row = $result->fetch_assoc();
-    echo "Hola ".$row['NombreUsuario']." bienvenido a prensa Michoacana tu email es ".$row['Email'];
+    header('Status: 301 Moved Permanently', false, 301);
+    header('Location:bienvenida.html');
 }else{
-    echo "No hay nada";
+    header('Status: 400 Not Found', false,400 );
+    header('Location:index.html');
 }
 //-----------------------------------------------------------------------------------
 
