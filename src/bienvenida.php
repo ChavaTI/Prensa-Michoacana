@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,8 @@
 <body>
     <main>
         <header>
-            <h1>Funciono!!!</h1>
+            <h1></h1>
+            <?php echo 'El usuario es '.$_SESSION['NombreUsuario']?>
         </header>
         <nav>
 

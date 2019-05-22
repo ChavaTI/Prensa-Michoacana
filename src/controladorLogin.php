@@ -29,8 +29,15 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
     $row = $result->fetch_assoc();
+    // Se guarda la sesion del usuario que se logueo
+        session_start();
+        $_SESSION['IdLogin'] = $row['IdLogin'];
+        $_SESSION['NombreUsuario'] = $row['NombreUsuario'];
+        $_SESSION['Email'] = $row['Email'];
+        $_SESSION['Status'] = $row['Status'];
+    // Se redirecciona con un status de 301
     header('Status: 301 Moved Permanently', false, 301);
-    header('Location:bienvenida.html');
+    header('Location:bienvenida.php');
 }else{
     header('Status: 400 Not Found', false,400 );
     header('Location:index.html');
