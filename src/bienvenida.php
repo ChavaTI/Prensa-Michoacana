@@ -42,11 +42,10 @@ if($_SESSION['IdLogin'] == null){
                 exit;
                 }
                 //---------------seleccionar los titulos--------------------------------------
-                $sql = '';
+                $sql = 'SELECT * FROM `Titulo` WHERE Status=true';
                 //----------------------------------------------------------------------------
 
 
-            ?>
         </section>
         <footer class="row">
 
