@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['IdLogin'] == null){
+    header('Location:index.html');
+}
 ?>
 
 <!DOCTYPE html>
