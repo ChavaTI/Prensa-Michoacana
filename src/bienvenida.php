@@ -43,8 +43,29 @@ if($_SESSION['IdLogin'] == null){
                 }
                 //---------------seleccionar los titulos--------------------------------------
                 $sql = 'SELECT * FROM `Titulo` WHERE Status=true';
-                //----------------------------------------------------------------------------
 
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                        echo '<div class="card mt-5 mr-4 text-white">';
+                            echo '<div class="card-header bg-primary">';
+                                echo '<h4 class="card-title">'.$row['Nombre'].'</h4>';
+                            echo '</div>';
+                            echo '<div class="card-body bg-info">';
+                                echo '<p>Localidad: '.$row['Ciudad'].','.$row['Estado'].'</p>';
+                                echo '<p>Periodicidad: '.$row['Periodicidad'].'</p>';
+                                echo '<p>Responsable: '.$row['Responsable'].'</p>';
+                                echo '<p>No. Paginas: '.$row['NoPaginas'].'</p>';
+                                echo '<p>Orientacion y Medidas : '.$row['OrientacionYMedidas'].'</p>';
+                            echo '</div>';
+                        echo '</div>';
+                    }
+                }else{
+                    echo "<p>No hay titulos en la base de datos</p>";
+                }
+                //----------------------------------------------------------------------------
+                ?>
 
         </section>
         <footer class="row">
