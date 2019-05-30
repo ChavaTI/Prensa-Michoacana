@@ -74,13 +74,14 @@ if($_SESSION['IdLogin'] == null){
                 ?>
             </div>
             <div class="row mt-4 mb-5">
-                <button class="icon-plus btn btn-primary boton"></button>
+                <button class="icon-plus btn btn-primary boton" id="btn-addTitulo"></button>
             </div>
         </section>
         <footer class="row">
 
         </footer>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
