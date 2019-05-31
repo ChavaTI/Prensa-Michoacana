@@ -64,7 +64,10 @@ if($_SESSION['IdLogin'] == null){
                     <label form="">Orientación y Medidas</label>
                     <input name="Orientación y Medidas" type="text" class="form-control" required>
                 </div>
-
+                <div class="form-group offset-12">
+                    <input type="reset" value="Cancelar" class="btn btn-primary disabled">
+                    <input type="submit" value="Agregar" class="btn btn-primary active">
+                </div>
 
         </section>
     </main>
