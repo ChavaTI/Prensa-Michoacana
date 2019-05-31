@@ -19,7 +19,7 @@ if($_SESSION['IdLogin'] == null){
 <body>
     <main class="container">
         <header class="row">
-            <h1><?php echo 'Agrega un título'  .$_SESSION['NombreUsuario']?></h1>
+            <h1><?php echo 'Agrega un título  '  .$_SESSION['NombreUsuario']?></h1>
         </header>
         <nav class="row">
             <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
