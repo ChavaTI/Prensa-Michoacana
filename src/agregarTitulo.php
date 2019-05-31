@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['IdLogin'] == null){
+    header('Location:index.html');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <title>Document</title>
+    <title>Agregar un Título</title>
 </head>
 
 <body>
     <main class="container">
         <header class="row">
-            <h1>Agregar Titulo</h1>
+            <h1><?php echo 'Agrega un título'  .$_SESSION['NombreUsuario']?></h1>
         </header>
         <nav class="row">
             <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
@@ -28,10 +35,10 @@
         </nav>
         <section class="row">
             <!-- Aqui va el formulario nuevo para agregar un nuevo titulo -->
-            <form action="agregarTitulo.html" method="POST"
-                 <div class="form-group>"
-                     <label for=""> Nombre</label>
-                     <input name="nombre" type="text" class="form-control" required>
+            <form action="agregarTitulo.php" method="POST"
+                <div class="form-group>"
+                    <label for=""> Nombre</label>
+                    <input name="nombre" type="text" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="">Estado</label>
@@ -52,7 +59,13 @@
                 <div class="form-group">
                     <label form="">No.de Páginas</label>
                     <input name="No. de Páginas" type="number" class="form-control" required>
-                 </div>
+                </div>
+                <div class="form-group">
+                    <label form="">Orientación y Medidas</label>
+                    <input name="Orientación y Medidas" type="text" class="form-control" required>
+                </div>
+
+
         </section>
     </main>
 </body>
