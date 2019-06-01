@@ -33,42 +33,48 @@ if($_SESSION['IdLogin'] == null){
                 </ul>
             </div>
         </nav>
-        <section class="row">
+        <section class="row mt-5">
             <!-- Aqui va el formulario nuevo para agregar un nuevo titulo -->
-            <form action="agregarTitulo.php" method="POST"
-                <div class="form-group>"
-                    <label for=""> Nombre</label>
-                    <input name="nombre" type="text" class="form-control" required>
+            <div class="col-6 offset-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="agregarTitulo.php" method="POST">
+                            <div class="form-group">
+                                <label for=""> Nombre</label>
+                                <input name="nombre" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Estado</label>
+                                <input name="Estado" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Ciudad</label>
+                                <input name="Ciudad" type="text"class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Periodicidad</label>
+                                <input name="Periodicidad" type="text" class="form-control"  required>
+                            </div>
+                            <div class="form-group">
+                                <label form="">Responsable</label>
+                                <input name="Responsable" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label form="">No.de Páginas</label>
+                                <input name="No. de Páginas" type="number" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label form="">Orientación y Medidas</label>
+                                <input name="Orientación y Medidas" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group offset-12">
+                                <input type="reset" value="Cancelar" class="btn btn-primary disabled">
+                                <input type="submit" value="Agregar" class="btn btn-primary active">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="">Estado</label>
-                    <input name="Estado" type="text" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="">Ciudad</label>
-                    <input name="Ciudad" type="text"class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="">Periodicidad</label>
-                    <input name="Periodicidad" type="text" class="form-control"  required>
-                </div>
-                <div class="form-group">
-                    <label form="">Responsable</label>
-                    <input name="Responsable" type="text" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label form="">No.de Páginas</label>
-                    <input name="No. de Páginas" type="number" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label form="">Orientación y Medidas</label>
-                    <input name="Orientación y Medidas" type="text" class="form-control" required>
-                </div>
-                <div class="form-group offset-12">
-                    <input type="reset" value="Cancelar" class="btn btn-primary disabled">
-                    <input type="submit" value="Agregar" class="btn btn-primary active">
-                </div>
-
+            </div>
         </section>
     </main>
 </body>
