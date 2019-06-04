@@ -17,7 +17,7 @@ const btnAddTitulo = document.getElementById('btn-addTitulo');
 if(btnAddTitulo != null){
     btnAddTitulo.addEventListener('click',()=>{
         console.log("Estas adentro?");
-        location.href="http://localhost:9090/agregarTitulo.php";
+        location.href="http://localhost:9090/crearTitulo.php";
     });
 }
 //------------------------------------------------------------------------
