@@ -38,10 +38,10 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-body">
-                        <form action="agregarTitulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
+                        <form action="GuardarTitulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
                             <div class="form-group">
                                 <label for=""> Nombre</label>
-                                <input name="nombre" type="text" class="form-control" required>
+                                <input name="Nombre" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Estado</label>
@@ -61,11 +61,11 @@ if($_SESSION['IdLogin'] == null){
                             </div>
                             <div class="form-group">
                                 <label form="">No.de Páginas</label>
-                                <input name="No. de Páginas" type="number" class="form-control" required>
+                                <input name="Numerodepaginas" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label form="">Orientación y Medidas</label>
-                                <input name="Orientación y Medidas" type="text" class="form-control" required>
+                                <input name="Orientaciónymedidas" type="text" class="form-control" required>
                             </div>
                             <div class="form-group offset-12">
                                 <input type="reset" value="Cancelar" class="btn btn-primary disabled">
