@@ -2,8 +2,9 @@
 
 //----------------Variables que se reciben por metodo POST------------------
   $nombre = $_POST['nombre'];  
-  $pass = $_POST['pass'];
   $email = $_POST['email'];
+  $pass = $_POST['pass'];
+  
 //---------------------------------------------------------------------------
 
 //----------------Encriptar contraseña--------------------------------------
@@ -24,7 +25,7 @@
 //----------------------------------------------------------------------------
 
 //----------------insertar los datos en la tabla ------------------------------
-  $sql = 'INSERT INTO `Usuario`(`NombreUsuario`, `Pass`, `Email`, `Status`) VALUES ("'.$nombre.'","'.$passEncryp.'","'.$email.'","1")';
+  $sql = 'INSERT INTO `Usuario`(`NombreUsuario`, `Email`, `Pass`, `Status`) VALUES ("'.$nombre.'","'.$email.'","'.$passEncryp.'","1")';
   if($conn->query($sql)){
    header('Location: ./index.html');
   }else{
