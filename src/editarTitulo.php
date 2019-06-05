@@ -40,7 +40,7 @@ if($_SESSION['IdLogin'] == null){
                     <div class="card-body">
                         <form action="ActualizarTitulo.php" method="POST">
                             <!-- Escondiendo un input con el idtitulo que se resive por get, para poider mandarlo por post -->
-                            <?php echo '<input name="IdTitulo" disabled="true" hidden type="text" value="'.$_GET['IdTitulo'].'">';?>
+                            <?php echo '<input name="IdTitulo" hidden type="text" value="'.$_GET['IdTitulo'].'">';?>
                             <div class="form-group">
                                 <label for=""> Nombre</label>
                                 <input name="Nombre" type="text" class="form-control" required>

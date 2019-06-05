@@ -1,7 +1,4 @@
 <?php
-echo "Prueba exitosa!!";
-?>
-<?php
 
 //----------------Variables que se reciben por metodo POST------------------
   $nombre = $_POST['Nombre'];  
@@ -20,13 +17,12 @@ echo "Prueba exitosa!!";
    echo 'Error: Hubo un error al conectar la base de datos \n';
    echo 'Error: ' .$conn->connect_errno;
    exit;
-
+ }
    //----------------insertar los datos en la tabla ------------------------------
-  $sql= ( UPDATE `Titulo` SET `Nombre`= '.$nombre.',`Estado`= '.$estado.',`Ciudad`='.$ciudad.',`Periodicidad`='.$periodicidad.',`Responsable`='.$responsable.',`NoPaginas`='.$numerodepaginas.',`OrientacionYMedidas`='.$orientacionymedidas.' WHERE 'IdTitulo'='.$IdTitulo.' = 2 );
+  $sql= ' UPDATE `Titulo` SET `Nombre`= "'.$nombre.'" ,`Estado`= "'.$estado.'" ,`Ciudad`= "'.$ciudad.'" ,`Periodicidad`= "'.$periodicidad.'" ,`Responsable`= "'.$responsable.'" ,`NoPaginas`= '.$numerodepaginas.',`OrientacionYMedidas`= "'.$orientacionymedidas.'" WHERE IdTitulo ='.$IdTitulo.'';
 
   if($conn->query($sql)){
-   header('Location: ./bienvenida.php');
-  
+    header('Location: ./bienvenida.php');
   }else{
     echo "Error: Problemas al crear un nuevo titulo .... ".$conn->error;
 }
