@@ -15,7 +15,7 @@
         echo 'Error: ' .$conn->connect_errno;
         exit;
       }
-    $sql = '';
+    $sql = 'UPDATE `Titulo` SET Status=false  WHERE IdTitulo= $_GET['IdTitulo' ';
 
     if($conn->query($sql)){
         header('Location: ./bienvenida.php');
