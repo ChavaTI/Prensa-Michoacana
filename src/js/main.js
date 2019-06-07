@@ -29,6 +29,8 @@ function confirmarEliminacion(id){
     }
 }
 
-//href="http://localhost:9090/eliminarTitulo.php?IdTitulo='.$row['IdTitulo'].'"
+function abrirTitulo(id){
+    location.href = 'http://localhost:9090/Titulo.php?IdTitulo='+id;
+}
 
 //------------------------------------------------------------------------
