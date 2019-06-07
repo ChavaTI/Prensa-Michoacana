@@ -27,7 +27,7 @@
 //----------------insertar los datos en la tabla ------------------------------
   $sql = 'INSERT INTO `Usuario`(`NombreUsuario`, `Email`, `Pass`, `Status`) VALUES ("'.$nombre.'","'.$email.'","'.$passEncryp.'","1")';
   if($conn->query($sql)){
-   header('Location: ./index.html');
+   header('Location: ../index.html');
   }else{
     echo "Error: Problemas al crear un nuevo usuario .... ".$conn->error;
   }

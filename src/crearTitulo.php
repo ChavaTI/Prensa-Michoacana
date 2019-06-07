@@ -38,7 +38,7 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-body">
-                        <form action="GuardarTitulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
+                        <form action="controllers/GuardarTitulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
                             <div class="form-group">
                                 <label for=""> Nombre</label>
                                 <input name="Nombre" type="text" class="form-control" required>

@@ -23,7 +23,7 @@
 //----------------insertar los datos en la tabla ------------------------------
   $sql='INSERT INTO `Titulo`(`Nombre`, `Estado`, `Ciudad`, `Periodicidad`, `Responsable`, `NoPaginas`, `OrientacionYMedidas`, `Status`) VALUES ("'.$nombre.'","'.$estado.'","'.$ciudad.'","'.$periodicidad.'","'.$responsable.'","'.$numerodepaginas.'","'.$orientacionymedidas.'",1)';
   if($conn->query($sql)){
-   header('Location: ./bienvenida.php');
+   header('Location: ../bienvenida.php');
   
   }else{
     echo "Error: Problemas al crear un nuevo titulo .... ".$conn->error;

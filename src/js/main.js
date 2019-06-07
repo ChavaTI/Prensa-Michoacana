@@ -25,7 +25,7 @@ if(btnAddTitulo != null){
 function confirmarEliminacion(id){
     let ops = confirm('¿Estas seguro de eliminar el Titulo?');
     if(ops == true){
-        location.href = 'http://localhost:9090/eliminarTitulo.php?IdTitulo='+id;
+        location.href = 'http://localhost:9090/controllers/eliminarTitulo.php?IdTitulo='+id;
     }
 }
 

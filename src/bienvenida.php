@@ -30,7 +30,7 @@ if($_SESSION['IdLogin'] == null){
                     <li class="nav-item"><a class="nav-link mr-5" href="about.html">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link mr-5" href="busqueda.php">Busqueda</a></li>
                     <div style="width: 14.9cm"></div>
-                    <form action="cerrarSesion.php" method="get"><button class="btn btn-info ml-5" type="submit">Cerrar
+                    <form action="controllers/cerrarSesion.php" method="get"><button class="btn btn-info ml-5" type="submit">Cerrar
                             Sesion</button></form>
                 </ul>
             </div>

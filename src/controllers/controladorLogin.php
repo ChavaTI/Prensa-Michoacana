@@ -37,10 +37,10 @@ if($result->num_rows > 0){
         $_SESSION['Status'] = $row['Status'];
     // Se redirecciona con un status de 301
     header('Status: 301 Moved Permanently', false, 301);
-    header('Location:bienvenida.php');
+    header('Location:../bienvenida.php');
 }else{
     header('Status: 400 Not Found', false,400 );
-    header('Location:index.html');
+    header('Location:../index.html');
 }
 //-----------------------------------------------------------------------------------
 
