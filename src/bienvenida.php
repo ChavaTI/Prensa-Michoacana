@@ -67,7 +67,7 @@ if($_SESSION['IdLogin'] == null){
                                 echo '</div>';
                                 echo '<div class="card-footer pie-carta">';
                                     echo ' <a href="http://localhost:9090/editarTitulo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5">Editar</a>';
-                                    echo ' <a href="http://localhost:9090/eliminarTitulo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-danger">Eliminar</a>';
+                                    echo ' <a onclick="confirmarEliminacion('.$row['IdTitulo'].')" class="btn btn-danger">Eliminar</a>';
                                 echo '</div>';
                             echo '</div>';
                     }

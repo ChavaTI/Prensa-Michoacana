@@ -20,4 +20,15 @@ if(btnAddTitulo != null){
         location.href="http://localhost:9090/crearTitulo.php";
     });
 }
+
+
+function confirmarEliminacion(id){
+    let ops = confirm('¿Estas seguro de eliminar el Titulo?');
+    if(ops == true){
+        location.href = 'http://localhost:9090/eliminarTitulo.php?IdTitulo='+id;
+    }
+}
+
+//href="http://localhost:9090/eliminarTitulo.php?IdTitulo='.$row['IdTitulo'].'"
+
 //------------------------------------------------------------------------
