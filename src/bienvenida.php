@@ -66,8 +66,8 @@ if($_SESSION['IdLogin'] == null){
                                 echo '<p>Orientacion y Medidas : '.$row['OrientacionYMedidas'].'</p>';
                                 echo '</div>';
                                 echo '<div class="card-footer pie-carta">';
-                                    echo ' <a href="http://localhost:9090/editarTitulo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5">Editar</a>';
-                                    echo ' <a onclick="confirmarEliminacion('.$row['IdTitulo'].')" class="btn btn-danger">Eliminar</a>';
+                                    echo ' <a href="http://localhost:9090/editarTitulo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5 icon-quill"></a>';
+                                    echo ' <a onclick="confirmarEliminacion('.$row['IdTitulo'].')" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';
                             echo '</div>';
                     }
@@ -78,7 +78,7 @@ if($_SESSION['IdLogin'] == null){
                 ?>
             </div>
             <div class="row mt-4 mb-5">
-                <button class="icon-plus btn btn-success boton" id="btn-addTitulo"></button>
+                <div class="col-1"><button class="icon-plus btn btn-success boton" id="btn-addTitulo"></button></div>
             </div>
         </section>
         <footer class="row">
