@@ -71,7 +71,7 @@ if($_SESSION['IdLogin'] == null){
                 ?>
             </div>
             <div class="row mt-4 mb-5">
-                <div class="col-1"><button class="icon-plus btn btn-success boton" id="btn-addTomo"></button></div>
+                <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick="agregarTomo('.$_GET['IdTitulo'].')"></button>';?></div>
             </div>
         </section>
         <footer class="row">
