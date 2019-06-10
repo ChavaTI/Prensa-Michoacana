@@ -37,7 +37,7 @@ function abrirTitulo(id,nombre){
 //------------------------------------------------------------------------
 
 //------------------este codigo para Titulo.php-----------------------
-function agregarTomo(idTitulo){
-    location.href = 'http://localhost:9090/crearTomo.php?idTitulo='+idTitulo;
+function agregarTomo(idTitulo,nombre){
+    location.href = 'http://localhost:9090/crearTomo.php?idTitulo='+idTitulo+'&Nombre='+nombre;
 }
 //------------------------------------------------------------------------

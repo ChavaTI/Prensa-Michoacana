@@ -40,6 +40,7 @@ if($_SESSION['IdLogin'] == null){
                     <div class="card-body">
                         <form action="controllers/GuardarTomo.php" method="POST"> 
                             <?php echo '<input hidden name="idTitulo" type="text" value='.$_GET['idTitulo'].' >'; ?>
+                            <?php echo '<input hidden name="NombreTitulo" type="text" value='.$_GET['Nombre'].' >'; ?>
                             <div class="form-group">
                                 <label for=""> Numero de tomo</label>
                                 <input name="numTomo" type="number" class="form-control" required>

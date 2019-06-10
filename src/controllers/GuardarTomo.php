@@ -1,6 +1,7 @@
 <?php
 $numTomo = $_POST['numTomo']; 
 $idTitulo = $_POST['idTitulo']; 
+$Nombre = $_POST['NombreTitulo'];
 
 $conn = new mysqli('db','administrator','adminpass123','PrensaMichoacana');
 
@@ -12,7 +13,7 @@ if($conn->connect_errno){
 
 $sql='INSERT INTO Tomo (NumeroTomo, IdTitulo, Status) VALUES ('.$numTomo.','.$idTitulo.', 1)';
 if($conn->query($sql)){
-    header('location: ../Titulo.php');
+    header('location: ../Titulo.php?IdTitulo='.$idTitulo.'&Nombre='.$Nombre);
 
 }else{
     echo "Error: Problemas al crear un nuevo Tomo .... ".$conn->error;
