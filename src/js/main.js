@@ -29,8 +29,13 @@ function confirmarEliminacion(id){
     }
 }
 
-function abrirTitulo(id){
-    location.href = 'http://localhost:9090/Titulo.php?IdTitulo='+id;
+function abrirTitulo(id,nombre){
+    console.log('http://localhost:9090/Titulo.php?IdTitulo='+id+'&Nombre='+nombre);
+    location.href = 'http://localhost:9090/Titulo.php?IdTitulo='+id+'&Nombre='+nombre;
 }
+
+//------------------------------------------------------------------------
+
+//------------------este codigo para Titulo.php-----------------------
 
 //------------------------------------------------------------------------

@@ -21,7 +21,7 @@ if($_SESSION['IdLogin'] == null){
 <body>
     <main class="container">
         <header class="row">
-            <h1><?php echo 'Bienvenido '.$_SESSION['NombreUsuario']?></h1>
+            <h1>Titulo <?php echo $_GET['Nombre'];?> </h1>
         </header>
         <nav class="row">
             <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
@@ -48,37 +48,30 @@ if($_SESSION['IdLogin'] == null){
                 exit;
                 }
                 //---------------seleccionar los titulos--------------------------------------
-                $sql = 'SELECT * FROM `Titulo` WHERE Status=true';
-
+                $sql = 'SELECT * FROM `Tomo` WHERE Status=true AND IdTitulo ='.$_GET['IdTitulo'].'' ;
                 $result = $conn->query($sql);
 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
                         echo '<div class="card mt-5 mr-4 text-white">';
-                            echo '<div onclick="abrirTitulo('.$row['IdTitulo'].',`'.$row['Nombre'].'`)" class="card-header cabacera-carta">';
-                                echo '<h4 class="card-title">'.$row['Nombre'].'</h4>';
+                            echo '<div onclick="abrirTomo('.$row['IdTomo'].')" class="card-header cabacera-carta">';
+                                echo '<h4 class="card-title">'.$row['NumeroTomo'].'</h4>';
                             echo '</div>';
-                            echo '<div onclick="abrirTitulo('.$row['IdTitulo'].',`'.$row['Nombre'].'`)" class="card-body cuerpo-carta">';
-                                echo '<p>Localidad: '.$row['Ciudad'].','.$row['Estado'].'</p>';
-                                echo '<p>Periodicidad: '.$row['Periodicidad'].'</p>';
-                                echo '<p>Responsable: '.$row['Responsable'].'</p>';
-                                echo '<p>No. Paginas: '.$row['NoPaginas'].'</p>';
-                                echo '<p>Orientacion y Medidas : '.$row['OrientacionYMedidas'].'</p>';
-                                echo '</div>';
+                            
                                 echo '<div class="card-footer pie-carta">';
-                                    echo ' <a href="http://localhost:9090/editarTitulo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5 icon-quill"></a>';
-                                    echo ' <a onclick="confirmarEliminacion('.$row['IdTitulo'].')" class="ml-5 btn btn-danger icon-cross"></a>';
+                                    echo ' <a href="http://localhost:9090/editarTomo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5 icon-quill"></a>';
+                                    echo ' <a onclick="confirmarEliminacionTomo('.$row['IdTomo'].')" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';
                             echo '</div>';
                     }
                 }else{
-                    echo "<p>No hay titulos en la base de datos</p>";
+                    echo "<p>No hay Tomos en la base de datos</p>";
                 }
                 //----------------------------------------------------------------------------
                 ?>
             </div>
             <div class="row mt-4 mb-5">
-                <div class="col-1"><button class="icon-plus btn btn-success boton" id="btn-addTitulo"></button></div>
+                <div class="col-1"><button class="icon-plus btn btn-success boton" id="btn-addTomo"></button></div>
             </div>
         </section>
         <footer class="row">
