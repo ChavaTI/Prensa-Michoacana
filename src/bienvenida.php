@@ -27,7 +27,7 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link mr-5" href="bienvenida.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link mr-5" href="about.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link mr-5" href="about.php">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link mr-5" href="busqueda.php">Busqueda</a></li>
                     <div style="width: 14.9cm"></div>
                     <form action="controllers/cerrarSesion.php" method="get"><button class="btn btn-info ml-5" type="submit">Cerrar
