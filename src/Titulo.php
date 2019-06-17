@@ -21,7 +21,7 @@ if($_SESSION['IdLogin'] == null){
 <body>
     <main class="container">
         <header class="row">
-            <h1>Titulo <?php echo $_GET['Nombre'];?> </h1>
+            <h1>Titulo <?php echo $_GET['NombreTitulo'];?> </h1>
         </header>
         <nav class="row">
             <div class="col-12 navbar navbar-expand-sm bg-light bg-dark navbar-dark">
@@ -60,7 +60,7 @@ if($_SESSION['IdLogin'] == null){
                             
                                 echo '<div class="card-footer pie-carta">';
                                     echo ' <a href="http://localhost:9090/editarTomo.php?IdTitulo='.$row['IdTitulo'].'" class="btn btn-info mr-5 icon-quill"></a>';
-                                    echo ' <a onclick="confirmarEliminacionTomo('.$row['IdTomo'].')" class="ml-5 btn btn-danger icon-cross"></a>';
+                                    echo ' <a onclick="confirmarEliminacionTomo('.$row['IdTomo'].','.$_GET['IdTitulo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';
                             echo '</div>';
                     }

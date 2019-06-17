@@ -8,7 +8,7 @@
     $sql = 'UPDATE `Tomo` SET `Status`=false WHERE IdTomo='.$_GET['IdTomo'];
     
     if($conn->query($sql)){
-        header('Location: ../Titulo.php');
+        header('Location: ../Titulo.php?IdTitulo='.$_GET['IdTitulo'].'&NombreTitulo='.$_GET['NombreTitulo']);
       }else{
             echo "Error: Problemas al crear un nuevo tomo ....".$conn->error;
     }

@@ -31,7 +31,7 @@ function confirmarEliminacion(id){
 
 function abrirTitulo(id,nombre){
     console.log('http://localhost:9090/Titulo.php?IdTitulo='+id+'&Nombre='+nombre);
-    location.href = 'http://localhost:9090/Titulo.php?IdTitulo='+id+'&Nombre='+nombre;
+    location.href = 'http://localhost:9090/Titulo.php?IdTitulo='+id+'&NombreTitulo='+nombre;
 }
 
 //------------------------------------------------------------------------
@@ -42,10 +42,10 @@ function agregarTomo(idTitulo,nombre){
     location.href = 'http://localhost:9090/crearTomo.php?idTitulo='+idTitulo+'&Nombre='+nombre;
 }
 
-function confirmarEliminacionTomo(id){
+function confirmarEliminacionTomo(idTomo,idTitulo,nombreTitulo){
     let opt = confirm('¿Estas seguro de eliminar el Tomo?');
     if(opt == true){
-        location.href = 'http://localhost:9090/controllers/eliminarTomo.php?IdTomo='+id;
+        location.href = 'http://localhost:9090/controllers/eliminarTomo.php?IdTomo='+idTomo+'&IdTitulo='+idTitulo+'&NombreTitulo='+nombreTitulo;
     }
 }
 //------------------------------------------------------------------------
