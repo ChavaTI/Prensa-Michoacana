@@ -40,4 +40,11 @@ function abrirTitulo(id,nombre){
 function agregarTomo(idTitulo,nombre){
     location.href = 'http://localhost:9090/crearTomo.php?idTitulo='+idTitulo+'&Nombre='+nombre;
 }
+
+function confirmarEliminacionTomo(id){
+    let opt = confirm('¿Estas seguro de eliminar el Tomo?');
+    if(opt == true){
+        location.href = 'http://localhost:9090/controllers/eliminarTomo.php?IdTomo='+id;
+    }
+}
 //------------------------------------------------------------------------
