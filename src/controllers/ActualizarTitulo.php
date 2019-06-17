@@ -22,7 +22,7 @@
   $sql= ' UPDATE `Titulo` SET `Nombre`= "'.$nombre.'" ,`Estado`= "'.$estado.'" ,`Ciudad`= "'.$ciudad.'" ,`Periodicidad`= "'.$periodicidad.'" ,`Responsable`= "'.$responsable.'" ,`NoPaginas`= '.$numerodepaginas.',`OrientacionYMedidas`= "'.$orientacionymedidas.'" WHERE IdTitulo ='.$IdTitulo.'';
 
   if($conn->query($sql)){
-    header('Location: ./bienvenida.php');
+    header('Location: ../bienvenida.php');
   }else{
     echo "Error: Problemas al crear un nuevo titulo .... ".$conn->error;
 }

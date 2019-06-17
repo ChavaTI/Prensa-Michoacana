@@ -60,7 +60,7 @@ if($conn->connect_errno){
                     <div class="col-6 offset-3">
                         <div class="card">
                             <div class="card-body">
-                                <form action="ActualizarTitulo.php" method="POST">
+                                <form action="controllers/ActualizarTitulo.php" method="POST">
                                     <!-- Escondiendo un input con el idtitulo que se resive por get, para poider mandarlo por post -->
                                     <input name="IdTitulo" hidden type="text" value="'.$_GET['IdTitulo'].'">
                                     <div class="form-group">
