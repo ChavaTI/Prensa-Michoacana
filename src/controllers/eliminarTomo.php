@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli('db','administrator','adminpass1223','PrensaMichoacana');
+    $conn = new mysqli('db','administrator','adminpass123','PrensaMichoacana');
     if($conn->conect_errno){
         echo 'Error:Hubo un error al conectar la base de datos \n';
         echo 'Error: ' .$conn->connect_errno;
