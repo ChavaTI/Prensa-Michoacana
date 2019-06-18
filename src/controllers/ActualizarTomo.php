@@ -11,7 +11,7 @@ if($conn->connect_errno){
     exit;
 }
 
-$sql='UPDATE `Tomo` SET `NumeroTomo`= '.$numTomo.', WHERE IdTomo= '.$idTomo.';
+$sql='UPDATE `Tomo` SET `NumeroTomo`= '.$numTomo.' WHERE IdTomo= '.$idTomo;
 if($conn->query($sql)){
     header('location: ../Titulo.php?IdTitulo='.$idTitulo.'&NombreTitulo='.$Nombre);
 
