@@ -13,7 +13,7 @@ if($conn->connect_errno){
 
 $sql='INSERT INTO Tomo (NumeroTomo, IdTitulo, Status) VALUES ('.$numTomo.','.$idTitulo.', 1)';
 if($conn->query($sql)){
-    header('location: ../Titulo.php?IdTitulo='.$idTitulo.'&Nombre='.$Nombre);
+    header('location: ../Titulo.php?IdTitulo='.$idTitulo.'&NombreTitulo='.$Nombre);
 
 }else{
     echo "Error: Problemas al crear un nuevo Tomo .... ".$conn->error;
