@@ -41,6 +41,7 @@ if($_SESSION['IdLogin'] == null){
                         <form action="controllers/ActualizarTomo.php" method="POST"> 
                             <?php echo '<input  hidden name="idTitulo" type="text" value='.$_GET['IdTitulo'].' >'; ?>
                             <?php echo '<input  hidden name="NombreTitulo" type="text" value="'.$_GET['NombreTitulo'].'" >'; ?>
+                            <?php echo '<input  hidden name="idTomo" type="text" value="'.$_GET['IdTomo'].'" >'; ?>
                             <div class="form-group">
                                 <label for=""> Numero de tomo</label>
                                 <?php echo '<input value="'.$_GET['NumeroTomo'].'" name="numTomo" type="number" class="form-control" required>'?>

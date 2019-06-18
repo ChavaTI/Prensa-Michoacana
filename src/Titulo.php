@@ -59,7 +59,7 @@ if($_SESSION['IdLogin'] == null){
                             echo '</div>';
                             
                                 echo '<div class="card-footer pie-carta">';
-                                    echo ' <a href="http://localhost:9090/editarTomo.php?IdTitulo='.$row['IdTitulo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&NumeroTomo='.$row['NumeroTomo'].'" class="btn btn-info mr-5 icon-quill"></a>';
+                                    echo ' <a href="http://localhost:9090/editarTomo.php?IdTitulo='.$row['IdTitulo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&IdTomo='.$row['IdTomo'].'&NumeroTomo='.$row['NumeroTomo'].'" class="btn btn-info mr-5 icon-quill"></a>';
                                     echo ' <a onclick="confirmarEliminacionTomo('.$row['IdTomo'].','.$_GET['IdTitulo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';
                             echo '</div>';
