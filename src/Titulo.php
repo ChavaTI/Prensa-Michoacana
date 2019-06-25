@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['IdLogin'] == null){
+if ($_SESSION['IdLogin'] == null) {
     header('Location:index.html');
 }
 ?>
@@ -15,7 +15,7 @@ if($_SESSION['IdLogin'] == null){
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Bienvenido</title>
+    <title>Titulo</title>
 </head>
 
 <body>
