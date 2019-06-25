@@ -48,4 +48,8 @@ function confirmarEliminacionTomo(idTomo,idTitulo,nombreTitulo){
         location.href = 'http://localhost:9090/controllers/eliminarTomo.php?IdTomo='+idTomo+'&IdTitulo='+idTitulo+'&NombreTitulo='+nombreTitulo;
     }
 }
+
+function abrirTomo(idTomo,numeroTomo,nombreTitulo){
+    location.href = 'http://localhost:9090/Tomo.php?IdTomo='+idTomo+'&NumeroTomo='+numeroTomo+'&NombreTitulo='+nombreTitulo;
+}
 //------------------------------------------------------------------------

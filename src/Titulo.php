@@ -54,7 +54,7 @@ if($_SESSION['IdLogin'] == null){
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
                         echo '<div class="card mt-5 mr-4 text-white">';
-                            echo '<div onclick="abrirTomo('.$row['IdTomo'].')" class="card-header cabacera-carta">';
+                            echo '<div onclick="abrirTomo('.$row['IdTomo'].','.$row['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
                                 echo '<h4 class="card-title">'.$row['NumeroTomo'].'</h4>';
                             echo '</div>';
                             
