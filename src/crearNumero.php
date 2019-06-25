@@ -43,7 +43,7 @@ if($_SESSION['IdLogin'] == null){
                             <?php echo '<input  hidden name="IdNumero" type="text" value="'.$_GET['IdNumero'].'" >'; ?>
                             <div class="form-group">
                                 <label for=""> Numero de Periódico</label>
-                                <input name="numPeriodico" type="number" class="form-control" required>
+                                <input name="NoPeriodico" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for=""> Fecha</label>
