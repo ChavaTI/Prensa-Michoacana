@@ -39,11 +39,15 @@ if($_SESSION['IdLogin'] == null){
                 <div class="card">
                     <div class="card-body">
                         <form action="controllers/GuardarNumero.php" method="POST"> 
-                            <?php echo '<input  hidden name="idTomo" type="text" value='.$_GET['idTomo'].' >'; ?>
-                            <?php echo '<input  hidden name="NumeroTomo" type="text" value="'.$_GET['NumeroTomo'].'" >'; ?>
+                            <?php echo '<input  hidden name="IdTomo" type="text" value='.$_GET['idTomo'].' >'; ?>
+                            <?php echo '<input  hidden name="IdNumero" type="text" value="'.$_GET['IdNumero'].'" >'; ?>
                             <div class="form-group">
-                                <label for=""> Numero de tomo</label>
-                                <input name="numTomo" type="number" class="form-control" required>
+                                <label for=""> Numero de Periódico</label>
+                                <input name="numPeriodico" type="number" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for=""> Fecha</label>
+                                <input name="fecha" type="date" class="form-control" required>
                             </div>
                             
                             <div class="form-group offset-12">
