@@ -1,10 +1,10 @@
 <?php
 
 //----------------Variables que se reciben por metodo POST------------------
-  $Fecha = $_POST['Fecha'];  
-  $IdNumero = $IdNumero['IdNumero'];
-  $NoPeriodico = $NoPeriodico['NoPeriodico'];
-  $IdTomo = $IdTomo['IdTomo'];
+  $Fecha = $_POST['fecha'];  
+  $NoPeriodico = $_POST['NoPeriodico'];
+  $IdTomo = $_GET['IdTomo'];
+
 
   //---------------Conexion a la base de  datos-------------------------------
   $conn = new mysqli('db','administrator','adminpass123','PrensaMichoacana');
@@ -18,9 +18,9 @@
 
 
 //----------------insertar los datos en la tabla ------------------------------
-  $sql='INSERT INTO `Numero`( `NoPeriodico`, `Status`, `Fecha`, `IdTomo`) VALUES ("'.$NoPeriodico.'",1,"'.$Fecha.'","'.$IdTomo.'")';
+  $sql='INSERT INTO `Numero`( `NoPeriodico`, `Status`, `Fecha`, `IdTomo`) VALUES ('.$NoPeriodico.',1,"'.$Fecha.'",'.$IdTomo.')';
   if($conn->query($sql)){
-   header('Location: ../bienvenida.php');
+   header('Location: ../Tomo.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo']);
   
   }else{
     echo "Error: Problemas al crear un nuevo número.... ".$conn->error;

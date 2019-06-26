@@ -55,6 +55,9 @@ if ($_SESSION['IdLogin'] == null) {
                                 echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].'.'.$_GET['IdTomo'].','.$_GET['NombreTitulo'].'" class="card-header cabacera-carta"></a>';
                                     echo '<h4 class="card-title">'.$row['NoPeriodico']. '</h4>';
                                 echo '</div>';
+                                echo '<div class="card-body cuerpo-carta">';
+                                    echo '<p>Fecha: '.$row['Fecha'].'</p>';
+                                echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
                                     echo '<a href="http://localhosto9090/editarNumero.php" class="btn btn-info mr-5 icon-quill"></a>';
                                     echo ' <a onclick="confirmarEliminacionNUmero('.$row['IdNumero'].')" class="ml-5 btn btn-danger icon-cross"></a>';

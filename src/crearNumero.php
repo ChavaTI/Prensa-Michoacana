@@ -38,7 +38,7 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-body">
-                        <?php echo '<form action="controllers/GuardarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'NombreTitulo='.$_GET['NombreTitulo'].'" method="POST"> ';?>
+                        <?php echo '<form action="controllers/GuardarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo'].'" method="POST"> ';?>
                             <?php echo '<input  hidden name="IdTomo" type="text" value='.$_GET['idTomo'].' >'; ?>
                             <?php echo '<input  hidden name="IdNumero" type="text" value="'.$_GET['IdNumero'].'" >'; ?>
                             <div class="form-group">
