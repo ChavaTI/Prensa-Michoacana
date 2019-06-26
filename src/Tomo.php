@@ -20,7 +20,7 @@ if ($_SESSION['IdLogin'] == null) {
 <body>
         <main class="container">
             <header class="row">
-                <h1>Título <?php echo $_GET['NombreTitulo']." Tomo ". $_GET['NumeroTomo'];?> </h1>
+                <h1>Título <?php echo $_GET['NombreTitulo']." > Tomo ". $_GET['NumeroTomo'];?> </h1>
             </header>
             <nav class="row">
                 <div class="col-12 navbar navbar-expand-sm bg-ligth bg-dark navbar-dark">
@@ -52,23 +52,22 @@ if ($_SESSION['IdLogin'] == null) {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="card mt-5 mr-4 text-white">';
-                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].'.'.$_GET['IdTomo'].','.$_GET['NombreTitulo'].'" class=btn btn-info mr-5 icon-quill"></a>';
+                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].'.'.$_GET['IdTomo'].','.$_GET['NombreTitulo'].'" class="card-header cabacera-carta"></a>';
                                     echo '<h4 class="card-title">'.$row['NoPeriodico']. '</h4>';
-                                echo '<7div>';
-
-                                    echo '<div class="card-footer pie-carta">';
-                                        echo '<a href="http://localhosto9090/editarNumero.php" class=btn btn-info mr-5 icon-quill"></a>';
-                                        echo ' <a onclick="confirmarEliminacionNUmero('.$row['IdNumero'].')" class="ml-5 btn btn-danger icon-cross"></a>';
-                                    echo '<div>';
                                 echo '</div>';
+                                echo '<div class= "card-footer pie-carta">';
+                                    echo '<a href="http://localhosto9090/editarNumero.php" class="btn btn-info mr-5 icon-quill"></a>';
+                                    echo ' <a onclick="confirmarEliminacionNUmero('.$row['IdNumero'].')" class="ml-5 btn btn-danger icon-cross"></a>';
+                                echo '</div>';    
+                            echo '</div>';
                      }
                     } else {
                         echo "<p> No hay Números en la base de datos </p>";
                     }
                     ?>
                     </div>
-                    <div class= "row mt-4 mb-5>"
-                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-succes boton" onclick=agregarNumero('.$row['IdNumero'].','.$_GET['IdTomo'].')"></button>';?></div>
+                    <div class= "row mt-4 mb-5">
+                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick=agregarNumero('.$row['IdNumero'].','.$_GET['IdTomo'].')"></button>';?></div>
                     </div>
                 </section>
                 <footer>
