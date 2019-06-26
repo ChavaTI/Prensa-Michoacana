@@ -53,3 +53,9 @@ function abrirTomo(idTomo,numeroTomo,nombreTitulo){
     location.href = 'http://localhost:9090/Tomo.php?IdTomo='+idTomo+'&NumeroTomo='+numeroTomo+'&NombreTitulo='+nombreTitulo;
 }
 //------------------------------------------------------------------------
+
+//------------------este codigo para Tomo.php-----------------------
+function agregarNumero(IdTomo,NumeroTomo,NombreTitulo){
+    location.href = "http://localhost:9090/crearNumero.php?IdTomo="+IdTomo+"&NumeroTomo="+NumeroTomo+"&NombreTitulo="+NombreTitulo;
+}
+//------------------------------------------------------------------
