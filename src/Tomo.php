@@ -60,7 +60,7 @@ if ($_SESSION['IdLogin'] == null) {
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
                                     echo '<a href="http://localhosto9090/editarNumero.php" class="btn btn-info mr-5 icon-quill"></a>';
-                                    echo ' <a onclick="confirmarEliminacionNUmero('.$row['IdNumero'].')" class="ml-5 btn btn-danger icon-cross"></a>';
+                                    echo ' <a onclick="confirmarEliminacionNumero('.$row['IdNumero'].','.$_GET['IdTomo'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';    
                             echo '</div>';
                      }

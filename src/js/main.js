@@ -58,4 +58,11 @@ function abrirTomo(idTomo,numeroTomo,nombreTitulo){
 function agregarNumero(IdTomo,NumeroTomo,NombreTitulo){
     location.href = "http://localhost:9090/crearNumero.php?IdTomo="+IdTomo+"&NumeroTomo="+NumeroTomo+"&NombreTitulo="+NombreTitulo;
 }
+
+function confirmarEliminacionNumero (idNumero,idTomo,numeroTomo,nombretitulo) {
+    let opt = confirm('¿Estas seguro de eliminar el Numero?');
+    if(opt == true){
+        location.href = "http://localhost:9090/controllers/eliminarNumero.php?IdNumero="+idNumero+"&IdTomo"+idTomo+"&NumeroTomo="+numeroTomo+"NombreTitulo="+nombretitulo;
+    }
+}
 //------------------------------------------------------------------
