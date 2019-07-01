@@ -19,8 +19,7 @@
 
 
 //----------------insertar los datos en la tabla ------------------------------
-  $sql='UPDATE `Numero` SET `NoPeriodico`='.$NoPeriodico.' `Fecha`="'.$Fecha.'" WHERE IdNumero='.$IdNumero;
-  echo $sql;
+  $sql='UPDATE `Numero` SET `NoPeriodico`='.$NoPeriodico.',`Fecha`="'.$Fecha.'" WHERE IdNumero='.$IdNumero;
   if($conn->query($sql)){
    header('Location: ../Tomo.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo']);
   
