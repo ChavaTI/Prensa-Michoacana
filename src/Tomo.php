@@ -59,7 +59,7 @@ if ($_SESSION['IdLogin'] == null) {
                                     echo '<p>Fecha: '.$row['Fecha'].'</p>';
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
-                                    echo '<a href="http://localhosto9090/editarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&IdNumero='.$row['IdNumero'].'&NoPeriodico='.$row['NoPeriodico'].'&Fecha='.$row['Fecha'].'" class="btn btn-info mr-5 icon-quill"></a>';
+                                    echo '<a href="http://localhost:9090/editarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&IdNumero='.$row['IdNumero'].'&NoPeriodico='.$row['NoPeriodico'].'&Fecha='.$row['Fecha'].'" class="btn btn-info mr-5 icon-quill"></a>';
                                     echo ' <a onclick="confirmarEliminacionNumero('.$row['IdNumero'].','.$_GET['IdTomo'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';    
                             echo '</div>';
