@@ -62,7 +62,7 @@ function agregarNumero(IdTomo,NumeroTomo,NombreTitulo){
 function confirmarEliminacionNumero (idNumero,idTomo,numeroTomo,nombretitulo) {
     let opt = confirm('¿Estas seguro de eliminar el Numero?');
     if(opt == true){
-        location.href = "http://localhost:9090/controllers/eliminarNumero.php?IdNumero="+idNumero+"&IdTomo="+idTomo+"&NumeroTomo="+numeroTomo+"NombreTitulo="+nombretitulo;
+        location.href = "http://localhost:9090/controllers/eliminarNumero.php?IdNumero="+idNumero+"&IdTomo="+idTomo+"&NumeroTomo="+numeroTomo+"&NombreTitulo="+nombretitulo;
     }
 }
 //------------------------------------------------------------------
