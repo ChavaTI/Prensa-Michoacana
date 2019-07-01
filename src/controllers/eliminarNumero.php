@@ -9,7 +9,7 @@ if ($conn->conect_errno){
 $sql = 'UPDATE `Numero` SET `Status`=false WHERE IdNumero='.$_GET['IdNumero'];
 
 if ($conn->query($sql)){
-    header('Location: ../Tomo.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo']. '&NombreTitulo=' .$_GET['NombreTitulo']);
+    header('Location: ../Tomo.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo']);
   }else{
         echo "Error: Problemas al eliminar un número ....".$conn->error;
 }
