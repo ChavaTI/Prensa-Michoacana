@@ -45,7 +45,7 @@ if($_SESSION['IdLogin'] == null){
                             </div>
                             <div class="form-group">
                                 <label for="">Redactor</label>
-                                <input name="Autor" type="text" class="form-control" required>
+                                <input name="Redactor" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Titulo</label>
@@ -58,7 +58,7 @@ if($_SESSION['IdLogin'] == null){
                             </div>
                             <div class="form-group">
                                 <label form="">NoPagina</label>
-                                <input name="Responsable" type="text" class="form-control" required>
+                                <input name="NoPagina" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label form="">Imagenes</label>
