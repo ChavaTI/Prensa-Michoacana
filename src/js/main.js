@@ -65,4 +65,8 @@ function confirmarEliminacionNumero (idNumero,idTomo,numeroTomo,nombretitulo) {
         location.href = "http://localhost:9090/controllers/eliminarNumero.php?IdNumero="+idNumero+"&IdTomo="+idTomo+"&NumeroTomo="+numeroTomo+"&NombreTitulo="+nombretitulo;
     }
 }
+
+function abrirNumero(IdNumero,NoPeriodico,IdTomo,NombreTitulo){
+    location.href = "http://localhost:9090/Numero.php?NombreTitulo="+NombreTitulo+"&IdTomo="+IdTomo+"&NoPeriodico="+NoPeriodico+"&IdNumero="+IdNumero;
+}
 //------------------------------------------------------------------

@@ -52,10 +52,10 @@ if ($_SESSION['IdLogin'] == null) {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="card mt-5 mr-4 text-white">';
-                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].'.'.$_GET['IdTomo'].','.$_GET['NombreTitulo'].'" class="card-header cabacera-carta"></a>';
+                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
                                     echo '<h4 class="card-title">'.$row['NoPeriodico']. '</h4>';
                                 echo '</div>';
-                                echo '<div class="card-body cuerpo-carta">';
+                                echo '<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-body cuerpo-carta">';
                                     echo '<p>Fecha: '.$row['Fecha'].'</p>';
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
