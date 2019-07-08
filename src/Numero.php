@@ -59,7 +59,13 @@ if ($_SESSION['IdLogin'] == null) {
                                     echo '<p>Redactor: '.$row['Redactor'].'</p>';
                                     echo '<p>Tipo: '.$row['TipoDeArticulo'].'</p>';
                                     echo '<p>No Paginas: '.$row['NoPagina'].'</p>';
-                                    echo '<p>Imagenes: '.$row['Imagenes'].'</p>';
+                                    $img = '';
+                                    if($row['Imagenes'] == '1'){
+                                        $img = 'Sí';
+                                    }else{
+                                        $img = 'No';
+                                    }
+                                    echo '<p>Imagenes: '.$img.'</p>';
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
                                     echo '<a href="http://localhost:9090/editarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&IdNumero='.$row['IdNumero'].'&NoPeriodico='.$row['NoPeriodico'].'&Fecha='.$row['Fecha'].'" class="btn btn-info mr-5 icon-quill"></a>';
