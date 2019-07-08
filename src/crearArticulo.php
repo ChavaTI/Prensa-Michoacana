@@ -38,34 +38,31 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-body">
-                        <form action="controllers/GuardarTitulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
+                        <form action="controllers/GuardarArticulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
                             <div class="form-group">
-                                <label for=""> Nombre</label>
-                                <input name="Nombre" type="text" class="form-control" required>
+                                <label for=""> TipoDeArticulo</label>
+                                <input name="Tipo de Articulo" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Estado</label>
-                                <input name="Estado" type="text" class="form-control" required>
+                                <label for="">Redactor</label>
+                                <input name="Autor" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Ciudad</label>
-                                <input name="Ciudad" type="text"class="form-control" required>
+                                <label for="">Titulo</label>
+                                <input name="Título" type="text"class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Periodicidad</label>
-                                <input name="Periodicidad" type="text" class="form-control"  required>
+                                <label for="">Contenido</label>
+                                <input name="Contenido" type="text" class="form-control"  required>
+                                <textarea rows="4" cols="50"> </textarea>
                             </div>
                             <div class="form-group">
-                                <label form="">Responsable</label>
+                                <label form="">NoPagina</label>
                                 <input name="Responsable" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label form="">No.de Páginas</label>
-                                <input name="Numerodepaginas" type="number" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label form="">Orientación y Medidas</label>
-                                <input name="Orientacionymedidas" type="text" class="form-control" required>
+                                <label form="">Imagenes</label>
+                                <input name="Imagenes" type="image" class="form-control" required>
                             </div>
                             <div class="form-group offset-12">
                                 <input type="reset" value="Cancelar" class="btn btn-primary disabled">
