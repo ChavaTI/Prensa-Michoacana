@@ -14,13 +14,13 @@ if ($_SESSION['IdLogin'] == null) {
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Tomo</title>
+    <title>Numero</title>
 </head>
 
 <body>
         <main class="container">
             <header class="row">
-                <h1>Título <?php echo $_GET['NombreTitulo']." > Tomo ". $_GET['NumeroTomo'];?> </h1>
+                <h1>Título <?php echo $_GET['NombreTitulo']." > Tomo ". $_GET['NumeroTomo']." > Numero de periodico".$_GET['NoPeriodico'];?> </h1>
             </header>
             <nav class="row">
                 <div class="col-12 navbar navbar-expand-sm bg-ligth bg-dark navbar-dark">
@@ -52,10 +52,10 @@ if ($_SESSION['IdLogin'] == null) {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="card mt-5 mr-4 text-white">';
-                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['NumeroTomo'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
+                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
                                     echo '<h4 class="card-title">'.$row['NoPeriodico']. '</h4>';
                                 echo '</div>';
-                                echo '<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['NumeroTomo'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-body cuerpo-carta">';
+                                echo '<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-body cuerpo-carta">';
                                     echo '<p>Fecha: '.$row['Fecha'].'</p>';
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';

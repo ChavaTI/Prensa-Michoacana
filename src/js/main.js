@@ -66,7 +66,6 @@ function confirmarEliminacionNumero (idNumero,idTomo,numeroTomo,nombretitulo) {
     }
 }
 
-function abrirNumero(IdNumero,NoPeriodico,IdTomo,NombreTitulo){
-    location.href = "http://localhost:9090/Numero.php?NombreTitulo="+NombreTitulo+"&IdTomo="+IdTomo+"&NoPeriodico="+NoPeriodico+"&IdNumero="+IdNumero;
-}
+function abrirNumero(IdNumero,NoPeriodico,NumeroTomo,IdTomo,NombreTitulo){
+    location.href = "http://localhost:9090/Numero.php?NombreTitulo="+NombreTitulo+"&IdTomo="+IdTomo+"&NumeroTomo="+NumeroTomo+"&NoPeriodico="+NoPeriodico+"&IdNumero="+IdNumero;}
 //------------------------------------------------------------------
