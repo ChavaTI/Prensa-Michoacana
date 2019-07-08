@@ -38,7 +38,7 @@ if($_SESSION['IdLogin'] == null){
             <div class="col-6 offset-3">
                 <div class="card">
                     <div class="card-body">
-                        <form action="controllers/GuardarArticulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
+                            <?php echo '<form action="controllers/GuardarArticulo.php?IdNumero='.$_GET['IdNumero'].'&NoPeriodico='.$_GET['NoPeriodico'].'&NumeroTomo='.$_GET['NumeroTomo'].'NombreTitulo='.$_GET['NombreTitulo'].'IdTomo='.$_GET['IdTomo'].'" method="POST"> ';?>
                             <div class="form-group">
                                 <label for=""> Tipo de artículo</label>
                                 <input name="TipoDeArticulo" type="text" class="form-control" required>
@@ -62,7 +62,7 @@ if($_SESSION['IdLogin'] == null){
                             <div class="form-group">
                                 <div class="form-check">
                                     <label class="form-check-label ">
-                                        <input type="checkbox" class="form-check-input "> Imagen
+                                        <input name="Imagenes" type="checkbox" class="form-check-input "> Imagen
                                     </label>
                                 </div>
                             </div>

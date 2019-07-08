@@ -73,7 +73,7 @@ if ($_SESSION['IdLogin'] == null) {
                     ?>
                     </div>
                     <div class= "row mt-4 mb-5">
-                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick="agregarArticulo('.$_GET['IdNumero'].','.$_GET['NoPeriodico'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)"></button>';?></div>
+                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick="agregarArticulo('.$_GET['IdNumero'].','.$_GET['NoPeriodico'].','.$_GET['NumeroTomo'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)"></button>';?></div>
                     </div>
                 </section>
                 <footer>

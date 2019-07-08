@@ -71,8 +71,8 @@ function abrirNumero(IdNumero,NoPeriodico,NumeroTomo,IdTomo,NombreTitulo){
 //------------------------------------------------------------------
 
 //------------------este codigo para Numero.php-----------------------
-function agregarArticulo(IdNumero,NoPeriodico,NumeroTomo,NombreTitulo){
-  location.href = "http://localhost:9090/crearArticulo.php?IdNumero="+IdNumero+"&NoPeriodico="+NoPeriodico+"&NumeroTomo="+NumeroTomo+"NombreTitulo="+NombreTitulo;
+function agregarArticulo(IdNumero,NoPeriodico,NumeroTomo,IdTomo,NombreTitulo){
+  location.href = "http://localhost:9090/crearArticulo.php?IdNumero="+IdNumero+"&NoPeriodico="+NoPeriodico+"&NumeroTomo="+NumeroTomo+"&IdTomo="+IdTomo+"&NombreTitulo="+NombreTitulo;
 }
 
 //------------------------------------------------------------------
