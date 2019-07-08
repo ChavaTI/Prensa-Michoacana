@@ -46,7 +46,7 @@ if ($_SESSION['IdLogin'] == null) {
                         exit;
                     }
                 
-                    $sql = 'SELECT * FROM Articulo WHERE Status=true AND IdNumero ='.$_GET['IdNumero'];
+                    $sql = 'SELECT * FROM articulos_vista WHERE Status=true AND IdNumero ='.$_GET['IdNumero'];
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
