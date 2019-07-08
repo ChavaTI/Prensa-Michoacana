@@ -74,3 +74,7 @@ ALTER TABLE RamaDelConocimiento
 Add constraint Fk_RamaDelConocimiento_Articulo
 Foreign Key(IdArticulo)
 References Articulo(IdArticulo);
+
+
+
+CREATE VIEW articulos_vista as SELECT a.*,rdc.Ciencia,rdc.Tecnologia FROM Articulo a INNER JOIN RamaDelConocimiento rdc ON rdc.idArticulo=a.idArticulo;
