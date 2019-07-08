@@ -40,30 +40,33 @@ if($_SESSION['IdLogin'] == null){
                     <div class="card-body">
                         <form action="controllers/GuardarArticulo.php" method="POST"> <!--Tiene que apuntar a GuardarTitulo.php-->
                             <div class="form-group">
-                                <label for=""> TipoDeArticulo</label>
-                                <input name="Tipo de Articulo" type="text" class="form-control" required>
+                                <label for=""> Tipo de artículo</label>
+                                <input name="TipoDeArticulo" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Redactor</label>
                                 <input name="Redactor" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Titulo</label>
-                                <input name="Título" type="text"class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Contenido</label>
-                                <input name="Contenido" type="text" class="form-control"  required>
-                                <textarea rows="4" cols="50"> </textarea>
+                                <label for="">Título</label>
+                                <input name="Titulo" type="text"class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label form="">NoPagina</label>
-                                <input name="NoPagina" type="text" class="form-control" required>
+                                <input name="NoPagina" type="number" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label form="">Imagenes</label>
-                                <input name="Imagenes" type="image" class="form-control" required>
+                                <label for="">Contenido</label>
+                                <textarea name="Contenido" rows="8" cols="50" class="form-control" require> </textarea>
                             </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label ">
+                                        <input type="checkbox" class="form-check-input "> Imagen
+                                    </label>
+                                </div>
+                            </div>
+                            
                             <div class="form-group offset-12">
                                 <input type="reset" value="Cancelar" class="btn btn-primary disabled">
                                 <input type="submit" value="Agregar" class="btn btn-primary active">
