@@ -69,3 +69,10 @@ function confirmarEliminacionNumero (idNumero,idTomo,numeroTomo,nombretitulo) {
 function abrirNumero(IdNumero,NoPeriodico,NumeroTomo,IdTomo,NombreTitulo){
     location.href = "http://localhost:9090/Numero.php?NombreTitulo="+NombreTitulo+"&IdTomo="+IdTomo+"&NumeroTomo="+NumeroTomo+"&NoPeriodico="+NoPeriodico+"&IdNumero="+IdNumero;}
 //------------------------------------------------------------------
+
+//------------------este codigo para Numero.php-----------------------
+function agregarArticulo(IdNumero,NoPeriodico,NumeroTomo,NombreTitulo){
+  location.href = "http://localhost:9090/crearArticulo.php?IdNumero="+IdNumero+"&NoPeriodico="+NoPeriodico+"&NumeroTomo="+NumeroTomo+"NombreTitulo="+NombreTitulo;
+}
+
+//------------------------------------------------------------------

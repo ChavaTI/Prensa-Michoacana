@@ -46,31 +46,34 @@ if ($_SESSION['IdLogin'] == null) {
                         exit;
                     }
                 
-                    $sql = 'SELECT * FROM Numero WHERE Status=true AND IdTomo ='.$_GET['IdTomo'];
+                    $sql = 'SELECT * FROM Articulo WHERE Status=true AND IdNumero ='.$_GET['IdNumero'];
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="card mt-5 mr-4 text-white">';
-                                echo'<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
-                                    echo '<h4 class="card-title">'.$row['NoPeriodico']. '</h4>';
+                                echo'<div onclick="abrirArticulo('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-header cabacera-carta">';
+                                    echo '<h4 class="card-title">'.$row['Titulo']. '</h4>';
                                 echo '</div>';
-                                echo '<div onclick="abrirNumero('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-body cuerpo-carta">';
-                                    echo '<p>Fecha: '.$row['Fecha'].'</p>';
+                                echo '<div onclick="abrirArticulo('.$row['IdNumero'].','.$row['NoPeriodico'].','.$_GET['IdTomo'].',`'.$_GET['NombreTitulo'].'`)" class="card-body cuerpo-carta">';
+                                    echo '<p>Redactor: '.$row['Redactor'].'</p>';
+                                    echo '<p>Tipo: '.$row['TipoDeArticulo'].'</p>';
+                                    echo '<p>No Paginas: '.$row['NoPagina'].'</p>';
+                                    echo '<p>Imagenes: '.$row['Imagenes'].'</p>';
                                 echo '</div>';
                                 echo '<div class= "card-footer pie-carta">';
                                     echo '<a href="http://localhost:9090/editarNumero.php?IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NombreTitulo='.$_GET['NombreTitulo'].'&IdNumero='.$row['IdNumero'].'&NoPeriodico='.$row['NoPeriodico'].'&Fecha='.$row['Fecha'].'" class="btn btn-info mr-5 icon-quill"></a>';
-                                    echo ' <a onclick="confirmarEliminacionNumero('.$row['IdNumero'].','.$_GET['IdTomo'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
+                                    echo ' <a onclick="confirmarEliminacionArticulo('.$row['IdNumero'].','.$_GET['IdTomo'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)" class="ml-5 btn btn-danger icon-cross"></a>';
                                 echo '</div>';    
                             echo '</div>';
                      }
                     } else {
-                        echo "<p> No hay Números en la base de datos </p>";
+                        echo "<p> No hay Articulos en la base de datos </p>";
                     }
                     ?>
                     </div>
                     <div class= "row mt-4 mb-5">
-                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick="agregarNumero('.$_GET['IdTomo'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)"></button>';?></div>
+                        <div class="col-1"><?php echo '<button class="icon-plus btn btn-success boton" onclick="agregarArticulo('.$_GET['IdNumero'].','.$_GET['NoPeriodico'].','.$_GET['NumeroTomo'].',`'.$_GET['NombreTitulo'].'`)"></button>';?></div>
                     </div>
                 </section>
                 <footer>
