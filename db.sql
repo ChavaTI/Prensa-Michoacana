@@ -39,10 +39,16 @@ IdNumero INT NOT NULL,
 Status boolean NOT NULL
 );
 
-CREATE TABLE RamaDelConocimiento(
-IdRamaDelConocimiento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-Ciencia VARCHAR(30) NOT NULL,
-Tecnologia VARCHAR(30),
+CREATE TABLE Ciencia(
+IdCiencia INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(30) NOT NULL,   
+IdArticulo INT NOT NULL,
+Status boolean NOT NULL
+);
+
+CREATE TABLE Tecnologia(
+IdTecnologia INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(30) NOT NULL,   
 IdArticulo INT NOT NULL,
 Status boolean NOT NULL
 );
@@ -70,11 +76,15 @@ Add constraint Fk_Articulo_Numero
 Foreign Key(IdNumero)
 References Numero(IdNumero);
 
-ALTER TABLE RamaDelConocimiento
-Add constraint Fk_RamaDelConocimiento_Articulo
+ALTER TABLE Ciencia
+Add constraint Fk_Ciencia_Articulo
+Foreign Key(IdArticulo)
+References Articulo(IdArticulo);
+
+ALTER TABLE Tecnologia
+Add constraint Fk_Tecnologia_Articulo
 Foreign Key(IdArticulo)
 References Articulo(IdArticulo);
 
 
 
-CREATE VIEW articulos_vista as SELECT a.*,rdc.Ciencia,rdc.Tecnologia FROM Articulo a INNER JOIN RamaDelConocimiento rdc ON rdc.idArticulo=a.idArticulo;

@@ -66,6 +66,13 @@ if($_SESSION['IdLogin'] == null){
                                     </label>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label for="">Rama del conocimiento</label>
+                                <select name="rama" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
                             
                             <div class="form-group offset-12">
                                 <input type="reset" value="Cancelar" class="btn btn-primary disabled">
