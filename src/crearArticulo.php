@@ -68,11 +68,35 @@ if($_SESSION['IdLogin'] == null){
                             </div>
 
                             <div class="form-group">
-                                <label for="">Rama del conocimiento</label>
-                                <select name="rama" class="form-control">
+                                <label for="">Ciencia</label>
+                                <select id="selectCiencia" onchange="listarCiencia()" name="" class="form-control">
                                     <option value=""></option>
+                                    <option value="Ciencias excactas">Ciencias exactas</option>
+                                    <option value="Ciencias humanas">Ciencias humanas</option>
+                                    <option value="Historia">Historia</option>
+                                    <option value="Fisica">Fisica</option>
                                 </select>
                             </div>
+                            
+                            <div class="form-group">
+                                <textarea id="ciencia" disabled name="ciencias" rows="8" cols="50" class="form-control" require> </textarea>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="">Tecnologia</label>
+                                <select id="selectTec" onchange="listarTec()" name="" class="form-control">
+                                    <option value=""></option>
+                                    <option value="Ingenieria">Ingenieria</option>
+                                    <option value="Electrica">Electrica</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="tecnologia" disabled name="tecnologias" rows="8" cols="50" class="form-control" require> </textarea>
+                            </div>
+
+
                             
                             <div class="form-group offset-12">
                                 <input type="reset" value="Cancelar" class="btn btn-primary disabled">
@@ -84,6 +108,7 @@ if($_SESSION['IdLogin'] == null){
             </div>
         </section>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

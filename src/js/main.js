@@ -76,3 +76,24 @@ function agregarArticulo(IdNumero,NoPeriodico,NumeroTomo,IdTomo,NombreTitulo){
 }
 
 //------------------------------------------------------------------
+
+
+//------------------este codigo para crearArticulo.php-------------
+
+function listarCiencia(){
+    let valorSelect = document.getElementById('selectCiencia').value;
+    let valorAnterior = document.getElementById('ciencia').value;
+    document.getElementById('ciencia').value = valorAnterior + "" +valorSelect+"\n";
+
+    document.getElementById('selectCiencia').selectedIndex=0;
+}
+
+function listarTec(){
+    let valorSelect = document.getElementById('selectTec').value;
+    let valorAnterior = document.getElementById('tecnologia').value;
+    document.getElementById('tecnologia').value = valorAnterior + "" +valorSelect+"\n";
+
+    document.getElementById('selectTec').selectedIndex=0;
+}
+
+//------------------------------------------------------------------
