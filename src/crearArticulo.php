@@ -79,7 +79,7 @@ if($_SESSION['IdLogin'] == null){
                             </div>
                             
                             <div class="form-group">
-                                <textarea id="ciencia" disabled name="ciencias" rows="8" cols="50" class="form-control" require> </textarea>
+                                <textarea id="ciencia" readonly name="ciencias" rows="8" cols="50" class="form-control" require> </textarea>
                             </div>
 
 
@@ -93,7 +93,7 @@ if($_SESSION['IdLogin'] == null){
                             </div>
                             
                             <div class="form-group">
-                                <textarea id="tecnologia" disabled name="tecnologias" rows="8" cols="50" class="form-control" require> </textarea>
+                                <textarea id="tecnologia" readonly name="tecnologias" rows="8" cols="50" class="form-control" require> </textarea>
                             </div>
 
 

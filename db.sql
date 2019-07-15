@@ -85,6 +85,3 @@ ALTER TABLE Tecnologia
 Add constraint Fk_Tecnologia_Articulo
 Foreign Key(IdArticulo)
 References Articulo(IdArticulo);
-
-
-
