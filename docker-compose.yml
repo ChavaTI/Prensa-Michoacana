@@ -26,4 +26,4 @@ services:
 networks:
  default:
   external:
-   name: docker_development  
+   name: docker_development2  

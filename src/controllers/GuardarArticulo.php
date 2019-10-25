@@ -38,19 +38,20 @@
   if($conn->query($sql)){
     $idArticulo = $conn->insert_id;
 
-    for ($i=0; $i < count($ciencias) ; $i++) { 
+    for ($i=0; $i < count($ciencias)-1 ; $i++) { 
       $sql2 = 'INSERT INTO Ciencia(Nombre,IdArticulo,Status) VALUES ("'.$ciencias[$i].'",'.$idArticulo.',1)';
       if(!($conn->query($sql2))){
         echo "Error: Problemas al guardar las ciencias .... ".$conn->error;
       }
+      
     }
 
-    for ($i=0; $i < count($tecnologias) ; $i++) { 
+    for ($i=0; $i < count($tecnologias)-1 ; $i++) { 
       $sql3 = 'INSERT INTO Tecnologia(Nombre,IdArticulo,Status) VALUES ("'.$tecnologias[$i].'",'.$idArticulo.',1)';
       if(!($conn->query($sql3))){
         echo "Error: Problemas al guardar las tecnoliogias .... ".$conn->error;
       }
-
+      
     }
 
    header('Location: ../Numero.php?NombreTitulo='.$_GET['NombreTitulo'].'&IdTomo='.$_GET['IdTomo'].'&NumeroTomo='.$_GET['NumeroTomo'].'&NoPeriodico='.$_GET['NoPeriodico'].'&IdNumero='.$_GET['IdNumero']);
